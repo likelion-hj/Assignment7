@@ -1,0 +1,231 @@
+/*********************************************************************************/
+/* Index Page                                                                        */
+/*********************************************************************************/
+/*navbar                                                                   */
+
+ul#menu li {
+  display:inline-block;
+}
+
+/* Header                                                                        */
+
+#indexheader {
+	padding: 11em 0em;
+	position: relative;
+	background: url(../img/hi.jpg) center no-repeat;
+	background-size: cover;
+	margin-bottom: 1.5em
+}
+
+.container {
+	    margin-left: auto;
+	    margin-right: auto;
+}
+
+#logo {
+		text-align: center;
+}
+
+#logo h1 a {
+    display: block;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #222831;
+		/*text outline code*/
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: #DC143C;
+}
+
+#logo span {
+		letter-spacing: 1px;
+		font-size: 1em;
+		font-weight: 500;
+		color: #ffffff;
+}
+
+
+.active {
+	 color: #DC143C;
+}
+
+a
+{
+	 color: #7B7B7B;
+}
+
+a:hover
+{
+	text-decoration: none;
+	color: #DC143C;
+}
+
+
+.img-thumbnail
+{
+  width: 300px;
+  height: 300px;
+  margin: 5px 5px 5px 5px;
+}
+
+/*Main                                                                        */
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: 1.25rem;
+	margin-top: .2rem;
+	font-weight: 400;
+}
+
+.divider
+{
+	overflow: hidden;
+	border-top: 1px solid #dbdbdb;
+}
+
+/* Buttons                                                                        */
+.button
+{
+	display: inline-block;
+	padding: 0.8em 1.5em;
+	background: #1d1d1d;
+	border-radius: 6px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #FFF;
+	-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	cursor: pointer;
+}
+
+.button:hover
+{
+	background: #DC143C;
+	color: #FFF !important;
+}
+
+
+/* Footer                                                                        */
+#footer
+{
+	background: #121212;
+	line-height: 1.5;
+	font-size: 100%;
+	color: #45382B;
+	padding: 24px 0;
+	position: relative;
+	font-family: BentonSansRegular, Arial, serif;
+	font-weight: normal;
+	text-align: left;
+	border-top: 6px solid #DC143C;
+	margin-top: 2em;
+}
+
+#footer header h2
+{
+	color: #FFF;
+}
+
+.bottom{
+  color: white;
+  padding: 2em;
+}
+
+/*********************************************************************************/
+/* Other Two Pages                                                                     */
+/*********************************************************************************/
+#header {
+    padding: 5em 0em;
+    text-align: center;
+		background: url(../img/hi.jpg) center no-repeat;
+		background-size: cover;
+}
+
+#bigheader {
+	margin-top: 1em;
+  display: inline-block;
+}
+
+/*********************************************************************************/
+/* Table                                                                    */
+/*********************************************************************************/
+
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/*********************************************************************************/
+/* Report Page                                                                  */
+/*********************************************************************************/
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

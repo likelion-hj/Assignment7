@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>Assignment7</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css\site.css">
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Comment Page</a>
+        </div>
+        <ul id="menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="member.html">Comments</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <!-- Main -->
+<div id="Member">
+    <div id="main">
+      <div class="container">
+    <h4>List of Comments</h4>
+    <p> Feel free to leave comments!</p>
+    <table id="commentTable" class="table table-striped" >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody id="commentTableBody">
+          <tr v-for="u in users">
+             <th scope="row">{{ u.id  }}</th>
+             <td>{{ u.commentText }}</td>
+          </tr>
+         </tbody>
+      </table>
+
+        <h3>Create New Comment</h3>
+      <form method="post" v-on:submit.prevent="createComment()" id="newCommentForm">
+        <div class="form-group">
+           <label for="newCommentText">Comment</label>
+           <input type="text" v-model="newComment.commentText" class="form-control" id="commentText">
+         </div>
+         <input id="submitNewComment" type="submit" class="btn btn-primary">
+      </form>
+  </div>
+</div>
+</div>
+
+  <!-- Footer -->
+  <footer id="footer">
+      <div class="row pad"></div>
+      <div class="bottom">
+        <center>
+        <p>Conditions of Use
+        <span>&#47;</span> Privacy Notice
+        <span>&#47;</span> No Ads
+        <span>&#47;</span> © 2020, HaleyHwang
+        </p>
+        </center>
+      </div>
+  </footer>
+
+  <!--  JavaScript -->
+  <!--Bootstrap JS-->
+  <!-- Vue.js -->
+
+  <script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--Local JS files we can delete table sort if not needed-->
+  <script type="text/javascript" src="js/moment.app.js"></script>
+
+</body>
+</html>
