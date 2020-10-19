@@ -21,7 +21,7 @@ var app = new Vue({
       }
     },
     createComment() {
-          fetch("api/comments/post.php", {
+          fetch("api/comments/create.php", {
             method:"POST",
             body: JSON.stringify(this.newCommentFrom),
             headers: {
