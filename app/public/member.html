@@ -14,10 +14,10 @@
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">Comment Page</a>
+          <a class="navbar-brand" href="#">Comment Page</a>
         </div>
         <ul id="menu">
-          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#">Home</a></li>
           <li><a class="nav-link active" href="member.html">Comments</a></li>
         </ul>
       </div>
@@ -45,10 +45,10 @@
       </table>
 
         <h3>Create New Comment</h3>
-      <form method="post" v-on:submit.prevent="createComment()" id="newCommentForm">
+      <form v-on:submit.prevent="createComment()" id="newCommentForm">
         <div class="form-group">
            <label for="newCommentText">Comment</label>
-           <input type="text" v-model="newComment.commentText" class="form-control" id="commentText">
+           <input type="text" v-model="newCommentFrom.commentText" class="form-control" id="commentText">
          </div>
          <input id="submitNewComment" type="submit" class="btn btn-primary">
       </form>

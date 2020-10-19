@@ -2,6 +2,7 @@
 
 require 'common.php';
 
+
 // Step 0: Validate the incoming data
 // This code doesn't do that, but should ...
 // For example, if the date is empty or bad, this insert fails.
@@ -16,10 +17,9 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO user(commentText)
+  'INSERT INTO user (commentText)
   VALUES (?)'
 );
-
 
 $stmt->execute([
   $_POST['commentText']
@@ -34,4 +34,4 @@ $stmt->execute([
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
 header('HTTP/1.1 303 See Other');
-header('Location: ../records/?guid=' . $guid);
+header('Location: ../comments/');

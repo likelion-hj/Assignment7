@@ -7,7 +7,7 @@ var app = new Vue({
       id:"",
       commentText:""
     }],
-    newComment:{
+    newCommentFrom:{
       id:"",
       commentText:""
     }
@@ -23,22 +23,21 @@ var app = new Vue({
     createComment() {
           fetch("api/comments/post.php", {
             method:"POST",
-            body: JSON.stringify(this.newComment),
+            body: JSON.stringify(this.newCommentFrom),
             headers: {
-              "Content-Type": "application/json; charset=utf-8",
-              "Accept": "application/json"
+              "Content-Type": "application/json; charset=utf-8"
             }
           })
           .then( response => response.json() )
           .then( json => {
             console.log("Returned from post:", json);
             // TODO: test a result was returned!
-            this.users.push(json[0]);
-            this.newComment = this.newData();
+            this.users = json;
+            this.newCommentFrom = this.newData();
           });
 
           console.log("Creating (POSTing)...!");
-          console.log(this.newComment);
+          console.log(this.newCommentFrom);
         }
       },
   created() {
@@ -46,7 +45,7 @@ var app = new Vue({
     .then( response => response.json() )
     .then( json => {
       this.users = json;
-      console.log(this.users)}
+      console.log(json)}
     );
     this.newComment = this.newData();
   }
